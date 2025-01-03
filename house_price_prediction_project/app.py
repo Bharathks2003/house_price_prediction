@@ -4,7 +4,6 @@ import numpy as np
 
 app = Flask(__name__)
 
-# Load the trained model and scaler
 model = joblib.load('models/linear_regression_model.pkl')
 scaler = joblib.load('models/scaler.pkl')
 
