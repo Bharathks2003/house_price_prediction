@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>House Price Prediction</h1><center>
+    <form action="/predict" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label for="area">Area:</label>
+                    <input type="text" name="area" required><br>
+                </td>
+                <td>
+                    <label for="bedrooms">Bedrooms:</label>
+                    <input type="text" name="bedrooms" required><br>
+                </td>
+                <td>
+                    <label for="bathrooms">Bathrooms:</label>
+                    <input type="text" name="bathrooms" required><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="stories">Stories:</label>
+                    <input type="text" name="stories" required><br>
+                </td>
+                <td>
+                    <label for="mainroad">Main Road (yes/no):</label>
+                    <input type="text" name="mainroad" required><br>
+                </td>
+                <td>
+                    <label for="guestroom">Guest Room (yes/no):</label>
+                    <input type="text" name="guestroom" required><br>
+                </td>
+            </tr>
+            <tr>
+                
+                <td>
+                    <label for="basement">Basement (yes/no):</label>
+                    <input type="text" name="basement" required><br>
+                </td>
+                <td>
+                    <label for="hotwaterheating">Hot Water Heating (yes/no):</label>
+                    <input type="text" name="hotwaterheating" required><br>
+                </td>
+                <td>
+                    <label for="airconditioning">Air Conditioning (yes/no):</label>
+                    <input type="text" name="airconditioning" required><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="parking">Parking:</label>
+                    <input type="text" name="parking" required><br>
+                </td>
+                <td>
+                    <label for="prefarea">Preferred Area (yes/no):</label>
+                    <input type="text" name="prefarea" required><br>
+                </td>
+                <td>
+                    <label for="furnishingstatus">Furnishing Status (furnished/semi-furnished/unfurnished):</label>
+                    <input type="text" name="furnishingstatus" required><br>
+                </td>
+            </tr>
+        </table>
+        <button type="submit">Predict</button>
+    </form>
+<!--    </center>-->
+<!--    {% if prediction_text %}-->
+<!--      <center>   <h2>{{ prediction_text }}</h2></center>-->
+<!--    {% endif %}-->
+<!--    <script src="{{ url_for('static', filename='js/script.js') }}"></script>-->
+</body>
+</html>
